@@ -1,0 +1,10 @@
+body{
+    background-color: Turquoise;
+}
+hr{
+    border-style: none;
+    border-top-style: dotted;
+    border-color: Aquamarine;
+    border-width: 5px;
+    width: 5%;
+}
