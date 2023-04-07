@@ -4,51 +4,44 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a8575b9-e583-44dd-a174-d40415b14287" name="Changes" comment="" />
+    <list default="true" id="f6435cf8-3019-4306-aa26-a43cbe735927" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="HTML File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2NekzDIC20HUoxAt4u9bgcPllFi" />
+  <component name="ProjectId" id="2O4FJ1Mpv3vEZs4VBxpGeRDTCYX" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "F:/Web_Development/Tutorials/Web_Development_Bootcamp/4&5-Introduction_to_CSS/CSS - Bacon Fansite"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/Web_Development/Tutorials/Web_Development_Bootcamp/4&amp;5-Introduction_to_CSS/CSS - Bacon Fansite&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\Web_Development\Tutorials\Web_Development_Bootcamp\HTML_Notebook" />
+      <recent name="F:\Web_Development\Tutorials\Web_Development_Bootcamp\4&amp;5-Introduction_to_CSS\CSS - Bacon Fansite\images" />
+      <recent name="F:\Web_Development\Tutorials\Web_Development_Bootcamp\4&amp;5-Introduction_to_CSS\CSS - Bacon Fansite" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1a8575b9-e583-44dd-a174-d40415b14287" name="Changes" comment="" />
-      <created>1680032195932</created>
+      <changelist id="f6435cf8-3019-4306-aa26-a43cbe735927" name="Changes" comment="" />
+      <created>1680811871962</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1680032195932</updated>
+      <updated>1680811871962</updated>
     </task>
     <servers />
   </component>

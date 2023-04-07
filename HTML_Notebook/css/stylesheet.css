@@ -1,3 +1,5 @@
+/****************************TAG Selectors *****************************/
+/* TAG selectors apply to all instances of the tags unless they are overridden by a class or id selector*/
 body{
     background-color: Turquoise;
 }
@@ -8,3 +10,25 @@ hr{
     border-width: 5px;
     width: 5%;
 }
+
+h1:hover, h2:hover {
+    color: gold;
+}
+
+/****************************CLASS Selectors *****************************/
+
+
+
+
+
+
+
+
+/****************************ID Selectors *****************************/
+/* IDs must be unique, you can only have one instance of an ID on each page */
+
+#title{
+    text-decoration: underline;
+}
+
+
