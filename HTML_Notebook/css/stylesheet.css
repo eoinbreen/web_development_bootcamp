@@ -16,7 +16,15 @@ h1:hover, h2:hover {
 }
 
 /****************************CLASS Selectors *****************************/
-
+.logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.headings{
+    text-align: center;
+}
 
 
 
@@ -28,6 +36,7 @@ h1:hover, h2:hover {
 /* IDs must be unique, you can only have one instance of an ID on each page */
 
 #title{
+    text-align: center;
     text-decoration: underline;
 }
 
