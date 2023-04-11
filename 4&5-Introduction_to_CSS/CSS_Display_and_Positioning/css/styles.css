@@ -1,3 +1,6 @@
+body{
+    margin:0;
+}
 /**************************** Display Properties *****************************/
 p{
     width:100px;
@@ -26,7 +29,7 @@ span{
     height: 100px;
     width: 100px;
     background-color: blue;
-    display:inline-block;
+    display: inline-block;
     position:relative;
     right: 100px;
 }
@@ -34,7 +37,39 @@ span{
     height: 100px;
     width: 100px;
     background-color: yellow;
-    display:inline-block;
+    display: inline-block;
     position:relative;
     right: 100px;
+}
+
+/**************************** Absolute Positioning *****************************/
+
+.container{
+    position: relative;
+    height: 300px;
+    width: 300px;
+    background-color: grey;
+}
+.abs_red{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    position: absolute;
+    right:0;
+
+}
+.abs_blue{
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    position: absolute;
+    top:0;
+    left: 100px;
+}
+.fxd_yellow{
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+    position: fixed;
+    top:0;
 }
