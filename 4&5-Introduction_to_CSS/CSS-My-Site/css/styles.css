@@ -1,13 +1,23 @@
 body{
     margin: 0;
+    text-align: center;
+    font-family: 'Merriweather', serif;
 }
 
 h1{
-    margin-top: 0;
+     margin-top: 0;
+     font-family: 'Sacramento', cursive;
+
+}
+
+h2, h3{
+    font-family: 'Montserrat', sans-serif;
 }
 .intro{
     background-color: #E4F9F5;
     color: green;
+    position: relative;
+    padding-top: 100px;
 }
 .middle{
     height: 200px;
@@ -22,4 +32,14 @@ h1{
 
 .pro{
     text-decoration: underline;
+}
+.top_cloud{
+    position: absolute;
+    top: 50px;
+    right: 30%;
+}
+.bottom_cloud{
+    position: absolute;
+    left: 300px;
+    bottom: 300px;
 }
