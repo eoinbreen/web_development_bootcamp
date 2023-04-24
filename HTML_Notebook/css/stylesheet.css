@@ -1,5 +1,8 @@
 /****************************TAG Selectors *****************************/
 /* TAG selectors apply to all instances of the tags unless they are overridden by a class or id selector*/
+*{ /** Selects Everything **/
+    text-align: center;
+}
 body{
     background-color: Turquoise;
     font-family: 'Oswald', sans-serif;
@@ -18,6 +21,9 @@ h1, h2, h3, h4, h5, h6{
 .headings h1:hover, .headings h2:hover {
     color: gold;
 }
+li{
+    list-style-position: inside; /** Makes Bullets/ Numbers follow text rather than staying to the left of the page**/
+}
 
 /****************************CLASS Selectors *****************************/
 .logo{
@@ -25,9 +31,7 @@ h1, h2, h3, h4, h5, h6{
     margin: 0 auto;
     width: 50%;
 }
-.headings{
-    text-align: center;
-}
+
 
 
 
