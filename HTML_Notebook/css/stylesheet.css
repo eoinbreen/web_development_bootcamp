@@ -15,7 +15,7 @@ hr{
     width: 5%;
 }
 
-h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6{ /* Combining Selectors */
     font-family: 'Press Start 2P', cursive;
 }
 .headings h1:hover, .headings h2:hover {
@@ -25,6 +25,21 @@ li{
     list-style-position: inside; /** Makes Bullets/ Numbers follow text rather than staying to the left of the page**/
 }
 
+.unordered-list>li{/* Child Selector, only selects direct child */
+    list-style-type: square;
+}
+
+.ordered-list>li{/* Child Selector, only selects direct child */
+    list-style-type: upper-roman;
+}
+
+.useful-links li{ /* Descendent Selector, selects all of the li inside of the useful-links class*/
+    list-style-type: circle;
+}
+
+li.red{ /* Chain Selector, selects all of the li with "red" class*/
+    color:red;
+}
 /****************************CLASS Selectors *****************************/
 .logo{
     display: block;
