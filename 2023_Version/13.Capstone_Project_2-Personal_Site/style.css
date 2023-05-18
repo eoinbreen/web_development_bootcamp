@@ -1,31 +1,65 @@
+*{
+    text-align: center;
+}
+h1, h2, h3{
+    font-family: 'Roboto', sans-serif;
+    text-decoration:underline
+}
+p{
+    font-family: 'Roboto Slab', serif;
+}
+
+li{
+    list-style-position: inside; /** Makes Bullets/ Numbers follow text rather than staying to the left of the page**/
+}
 #navbar{
-    background-color: white;
-    position:fixed;
+    background-color: #B0DAFF;
+    color: #19A7CE;
+    position: sticky; 
     top:0;
     width: 100%;
     
 }
+#me img{
+    float:left;
+    height: 100px;
+}
+#me{
+    height: 100px;
+    background-color: #B0DAFF;
+    text-align: left !important; 
+}
 #introduction{
-    background-color: red;
+    background-color:  #19A7CE;
+    color: #146C94;
     height: 500px;
+    padding: 20px;
 }
 
 #resume{
-    background-color: blue;
-    height: 500px;
+    color:  #19A7CE;
+    background-color: #146C94;
+    
+    padding: 20px;
 }
 
 #past-projects{
-    background-color: green;
+    background-color:  #19A7CE;
+    color: #146C94;
     height: 500px;
+    padding: 20px;
 }
 
 #about-me{
-    background-color: yellow;
+    color:  #19A7CE;
+    background-color: #146C94;
     height: 500px;
+    padding: 20px;
 }
 
 #contact-me{
-    background-color: orange;
+    background-color:  #19A7CE;
+    color: #146C94;
     height: 500px;
+    padding: 20px;
 }
