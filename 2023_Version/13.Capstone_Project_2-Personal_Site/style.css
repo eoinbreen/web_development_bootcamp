@@ -20,38 +20,49 @@ li{
     width: 100%;
     
 }
-#me img{
+
+
+
+.flex-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #B0DAFF;
+}
+.flex-container img{
     float:left;
     height: 100px;
+    border-radius: 50%;
 }
-#me{
-    height: 100px;
-    background-color: #B0DAFF;
-    text-align: left !important; 
+.text{
+    margin-left:20px;
 }
 #introduction{
     background-color:  #19A7CE;
-    color: #146C94;
+    
     height: 500px;
     padding: 20px;
 }
 
-#resume{
-    color:  #19A7CE;
-    background-color: #146C94;
+#work-experience{
     
+    background-color: #146C94;
     padding: 20px;
+}
+
+th, td {
+    border-style: dashed!important;
+    border-width: 2px !important;
+    border-color: black !important;
 }
 
 #past-projects{
     background-color:  #19A7CE;
-    color: #146C94;
     height: 500px;
     padding: 20px;
 }
 
 #about-me{
-    color:  #19A7CE;
     background-color: #146C94;
     height: 500px;
     padding: 20px;
@@ -59,7 +70,6 @@ li{
 
 #contact-me{
     background-color:  #19A7CE;
-    color: #146C94;
     height: 500px;
     padding: 20px;
 }
