@@ -5,13 +5,14 @@ h1, h2, h3{
     font-family: 'Roboto', sans-serif;
     text-decoration:underline
 }
-p{
+p, li{
     font-family: 'Roboto Slab', serif;
 }
-
 li{
     list-style-position: inside; /** Makes Bullets/ Numbers follow text rather than staying to the left of the page**/
+    text-align: left;
 }
+
 #navbar{
     background-color: #B0DAFF;
     color: #19A7CE;
@@ -20,14 +21,19 @@ li{
     width: 100%;
     
 }
+#top{
+    background-color: #B0DAFF;
+    height: 100px;
+}
+/**HOMEPAGE**/
 
-
-
+.dropdown-menu{
+    background-color: #B0DAFF;
+}
 .flex-container{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #B0DAFF;
 }
 .flex-container img{
     float:left;
@@ -37,16 +43,14 @@ li{
 .text{
     margin-left:20px;
 }
-#introduction{
-    background-color:  #19A7CE;
-    
+#introduction{   
+    background-color: #2CD3E1;
     height: 500px;
     padding: 20px;
 }
 
-#work-experience{
-    
-    background-color: #146C94;
+#resume{
+    background-color:  #19A7CE;
     padding: 20px;
 }
 
@@ -57,19 +61,39 @@ th, td {
 }
 
 #past-projects{
-    background-color:  #19A7CE;
+    background-color: #2CD3E1;
+    
     height: 500px;
     padding: 20px;
 }
 
 #about-me{
-    background-color: #146C94;
+    background-color:  #19A7CE;
     height: 500px;
     padding: 20px;
 }
 
 #contact-me{
-    background-color:  #19A7CE;
+    background-color: #2CD3E1;
     height: 500px;
+    padding: 20px;
+}
+
+/** WORK EXPERIENCE**/
+
+#tco{   
+    background-color: #2CD3E1;
+    padding: 20px;
+}
+#clerical{   
+    background-color:  #19A7CE;
+    padding: 20px;
+}
+#web-developer{   
+    background-color: #2CD3E1;
+    padding: 20px;
+}
+#intern{   
+    background-color:  #19A7CE;
     padding: 20px;
 }

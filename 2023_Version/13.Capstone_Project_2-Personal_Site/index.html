@@ -18,8 +18,15 @@
       <div class="container">
         <header class="d-flex justify-content-center py-3">
           <ul class="nav nav-pills">
+            <li class="nav-item"><a href="#" class="nav-link" aria-current="page">Home</a></li>
             <li class="nav-item"><a href="#introduction" class="nav-link" aria-current="page">Introduction</a></li>
-            <li class="nav-item"><a href="#work-experience" class="nav-link">Work Experience</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">Work Experience</a>
+               <ul class="dropdown-menu" style="background-color: #B0DAFF;">
+               <li><a class="dropdown-item" href="#resume"> Summary</a></li>
+               <li><a class="dropdown-item" href="work-experience.html"> Detailed </a></li>
+               </ul>
+           </li>
             <li class="nav-item"><a href="#past-projects" class="nav-link">Past Projects</a></li>
             <li class="nav-item"><a href="#about-me" class="nav-link">About Me</a></li>
             <li class="nav-item"><a href="#contact-me" class="nav-link">Contact Me</a></li>
@@ -27,7 +34,7 @@
         </header>
       </div>
     </section>
-    <section id="me">
+    <section id="top">
       <div class="flex-container">
         <div class="image">
           <img src="images/Me.png" alt="Eoin">
@@ -40,12 +47,11 @@
 
     <section id="introduction">
       <h2>Introduction</h2>
-      I am a Software Developer, proficient in using a wide array of programming languages including C, C#, C++, Objective C, Java and Ruby on Rails. I am currently doing courses in Python and HTML to expand my knowledge in these languages
-
+      I am a Software Developer, proficient in using a wide array of programming languages including C, C#, C++, Objective C, Java and Ruby on Rails. I am currently doing courses in Python and HTML to expand my knowledge in these languages.
 
     </section>
 
-    <section id="work-experience">
+    <section id="resume">
       <h2>Work Experience</h2>
 
         <table>
@@ -75,17 +81,18 @@
           </tbody>
       </table>
       <br>
-        <p>A more in depth explanation for each of these roles can be found <a href="duties.html">here.</a></p>
+        <p>A more in depth explanation for each of these roles can be found <a href="work-experience.html">here.</a></p>
       
     </section>
 
     <section id="past-projects">
-        <h2>Past Projects</h2>
+      <h2>Past Projects</h2>
     </section>
 
     <section id="about-me">
         <h2>About Me</h2>
     </section>
+
 
     <section id="contact-me">
         <h2>Contact Me</h2>
