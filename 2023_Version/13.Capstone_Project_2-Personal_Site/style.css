@@ -72,14 +72,12 @@ th, td {
 
 #about-me{
     background-color:  #19A7CE;
-    height: 500px;
+
     padding: 20px;
 }
 
-#contact-me{
-    background-color: #2CD3E1;
-    height: 500px;
-    padding: 20px;
+#footer{
+    background-color: #B0DAFF;
 }
 
 
