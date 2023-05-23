@@ -13,6 +13,7 @@ li{
     text-align: left;
 }
 
+
 #navbar{
     background-color: #B0DAFF;
     color: #19A7CE;
@@ -23,7 +24,6 @@ li{
 }
 #top{
     background-color: #B0DAFF;
-    height: 200px;
 }
 /**HOMEPAGE**/
 
@@ -99,3 +99,5 @@ th, td {
     background-color:  #19A7CE;
     padding: 20px;
 }
+
+
