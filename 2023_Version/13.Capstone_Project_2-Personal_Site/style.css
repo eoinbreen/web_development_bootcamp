@@ -36,8 +36,6 @@ li{
     justify-content: center;
 }
 .flex-container img{
-    float:left;
-    
     border-radius: 50%;
 }
 .text{
@@ -45,7 +43,6 @@ li{
 }
 #introduction{   
     background-color: #2CD3E1;
-    height: 500px;
     padding: 20px;
 }
 
@@ -101,3 +98,13 @@ th, td {
 }
 
 
+@media only screen and (max-width: 700px) {
+    .flex-container{
+        flex-direction: column;
+    }
+
+    #past-projects img{
+        float:none;
+        margin-bottom: 20px;
+    }
+  }
