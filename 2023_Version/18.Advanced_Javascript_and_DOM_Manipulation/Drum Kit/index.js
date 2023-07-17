@@ -1,11 +1,23 @@
 
+//Detecting Onscreen Button Press
 buttons = document.querySelectorAll(".drum")
 
 for(var i = 0; i<buttons.length; i++)
 {
     buttons[i].addEventListener("click", function (){
        button = this.innerHTML;
-       switch (button){
+       playSound(button)
+    });
+}
+
+//Detecting Keyboard Press
+document.addEventListener("keydown", function(event){
+    key = event.key;
+    playSound(key)
+})
+
+function playSound(key){
+    switch (key){
         case "w":
             var audio = new Audio("sounds/tom-1.mp3");
             audio.play();
@@ -34,9 +46,5 @@ for(var i = 0; i<buttons.length; i++)
             var audio = new Audio("sounds/snare.mp3");
             audio.play();
         break
-        default:    // runs if no other case in statement runs
-            console.log(button)
        }
-    });
 }
-
