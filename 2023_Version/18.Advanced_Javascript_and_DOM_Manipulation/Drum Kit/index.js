@@ -7,6 +7,7 @@ for(var i = 0; i<buttons.length; i++)
     buttons[i].addEventListener("click", function (){
        button = this.innerHTML;
        playSound(button)
+       buttonAnimation(button)
     });
 }
 
@@ -14,6 +15,7 @@ for(var i = 0; i<buttons.length; i++)
 document.addEventListener("keydown", function(event){
     key = event.key;
     playSound(key)
+    buttonAnimation(key)
 })
 
 function playSound(key){
@@ -47,4 +49,15 @@ function playSound(key){
             audio.play();
         break
        }
+}
+
+function buttonAnimation(key){
+    active_button = document.querySelector("."+key);
+    active_button.classList.add("pressed");
+   
+    setTimeout(function(){
+        active_button.classList.remove("pressed");
+    }, 100);
+    
+
 }
