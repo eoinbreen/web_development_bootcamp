@@ -31,3 +31,11 @@ $(document).keydown(function(event){
     $("h1").text(event.key);
 })
 
+// Adding html 
+$("h1").before("<button>New</button>") // Adds new html before the opening tag of the element
+$("h1").after("<button>New</button>") // Adds new html after the closing tag of the element
+$("h1").prepend("<button>New</button>") // Adds new html at the start of the content of the element
+$("h1").append("<button>New</button>") // Adds new html at the end of the content of the element
+
+// Removing elements
+$("button").remove();
