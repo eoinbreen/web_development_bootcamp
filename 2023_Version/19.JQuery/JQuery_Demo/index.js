@@ -17,3 +17,17 @@ $("button").text("Don't Click Me"); //TextContent
 // Attribute Manipulation
 console.log($("a").attr("href"));
 $("a").attr("href","https://www.yahoo.com/" );
+
+// Event Listeners
+$("h1").on("mouseover", function(){
+    $("h1").toggleClass("big-title")
+})
+
+$("button").click(function(){
+    console.log("button was clicked")
+})
+
+$(document).keydown(function(event){
+    $("h1").text(event.key);
+})
+
