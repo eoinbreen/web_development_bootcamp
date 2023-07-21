@@ -23,9 +23,6 @@ $("h1").on("mouseover", function(){
     $("h1").toggleClass("big-title")
 })
 
-$("button").click(function(){
-    console.log("button was clicked")
-})
 
 $(document).keydown(function(event){
     $("h1").text(event.key);
@@ -33,9 +30,22 @@ $(document).keydown(function(event){
 
 // Adding html 
 $("h1").before("<button>New</button>") // Adds new html before the opening tag of the element
-$("h1").after("<button>New</button>") // Adds new html after the closing tag of the element
+$("h1").after("<button>New</button> <br>") // Adds new html after the closing tag of the element
 $("h1").prepend("<button>New</button>") // Adds new html at the start of the content of the element
 $("h1").append("<button>New</button>") // Adds new html at the end of the content of the element
 
 // Removing elements
-$("button").remove();
+// $("button").remove();
+
+// Animations
+
+$("button").click(function(){
+    //$("h1").toggle()
+    //$("h1").fadeOut()
+    //$("h1").fadeIn()
+    //$("h1").fadeToggle()
+    //$("h1").slideUp()
+    //$("h1").slideDown()
+    //$("h1").slideToggle()
+    $("h1").slideUp().slideDown().animate({opacity: 0.5}) //You can chain animations 
+})
