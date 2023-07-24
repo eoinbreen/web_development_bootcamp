@@ -4,6 +4,8 @@ var user_clicked_pattern = []
 
 $(".btn").click(function(event){
     user_chosen_color = this.id;
+    playSound(user_chosen_color);
+    animatePress(user_chosen_color);
     user_clicked_pattern.push(user_chosen_color);
     console.log(user_clicked_pattern);
 })
@@ -15,9 +17,22 @@ function nextSequence(){
 
     next_button = $("#"+random_chosen_color);
     next_button.fadeOut(50).fadeIn(100);
-    var audio = new Audio("sounds/"+random_chosen_color+".mp3");
-    audio.play();
+    playSound(random_chosen_color);
     
     //console.log(game_pattern);
+}
+
+function playSound(name){
+    var audio = new Audio("sounds/"+name+".mp3");
+    audio.play();
+}
+
+function animatePress(current_color){
+    active_button = document.querySelector("#"+current_color);
+    active_button.classList.add("pressed");
+   
+    setTimeout(function(){
+        active_button.classList.remove("pressed");
+    }, 100);
 }
 
