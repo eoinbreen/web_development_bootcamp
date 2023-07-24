@@ -1,6 +1,12 @@
 var button_colors = ["red", "blue", "green", "yellow"];
 var game_pattern = [];
+var user_clicked_pattern = []
 
+$(".btn").click(function(event){
+    user_chosen_color = this.id;
+    user_clicked_pattern.push(user_chosen_color);
+    console.log(user_clicked_pattern);
+})
 
 function nextSequence(){
     rand_num = Math.floor(Math.random() * 4);
