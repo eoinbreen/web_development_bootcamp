@@ -19,7 +19,6 @@ $(".btn").click(function(event){
     user_clicked_pattern.push(user_chosen_color);
     current_input = user_clicked_pattern.length - 1;
     checkAnswer(current_input)
-    //console.log(user_clicked_pattern);
 })
 
 function nextSequence(){
@@ -32,12 +31,11 @@ function nextSequence(){
     playSound(random_chosen_color);
     level += 1;
     $("#level-title").text("Level " + level);
-    //console.log(game_pattern);
 }
 
+//Checks the last answer in the user clicked pattern against the corresponding answer in the game pattern
 function checkAnswer(current_input){
     if(user_clicked_pattern[current_input] === game_pattern[current_input]){
-        console.log("success")
         if(user_clicked_pattern.length === game_pattern.length){
             user_clicked_pattern = [];
             setTimeout(function(){
@@ -46,11 +44,26 @@ function checkAnswer(current_input){
         }
     }
     else{
-        console.log("wrong")
-        
-        // Game Over
+        gameOver();
     }
 
+}
+
+function gameOver(){
+    playSound("wrong");
+    $(document.body).addClass("game-over");
+    setTimeout(function(){
+        $(document.body).removeClass("game-over");
+    }, 200);
+    $("#level-title").text("Game Over, Press Any Key to Restart");
+    restartGame();
+}
+
+function restartGame(){
+    level = 0;
+    is_playing = false;
+    user_clicked_pattern = [];
+    game_pattern = [];
 }
 
 function playSound(name){
@@ -59,11 +72,11 @@ function playSound(name){
 }
 
 function animatePress(current_color){
-    active_button = document.querySelector("#"+current_color);
-    active_button.classList.add("pressed");
+    active_button = $("#"+current_color);
+    active_button.addClass("pressed");
    
     setTimeout(function(){
-        active_button.classList.remove("pressed");
+        active_button.removeClass("pressed");
     }, 100);
 }
 
