@@ -1,8 +1,17 @@
 ls - Lists all files in your current directory
 cd folder - Changes the current directory to the specified folder (needs to be in your current directory)
 cd ../ - Changes the current directory to the folder above the current folder
+pwd - Print Working Directory gives you the file path to your current folder
 cd ~ - Changes directory to your root directory
 cd then drag and drop folder to change directory to that folder
 alt + click to move curser to that part of the command line
 ctrl + a to go to the start of the command line
 ctrl + e to go to the end of the command line
+
+mkdir folder - make a new folder
+touch text.txt - make a new file
+rm text.txt - remove a file
+rm -r folder - removes a folder and everything in it - USE WITH CAUTION 
+rm * - removes all files in the current folder - USE WITH CAUTION
+start text.txt - open the file in a text editor
+code text.txt - open the file in a code editor
