@@ -1,0 +1,23 @@
+Black / Green Color Scheme
+Partial files for header / footer
+Three Tabs – One to add tasks, one for the daily tasks and one for the work tasks
+
+Add Tasks
+dropdown list with work and daily options. 
+Input field for both 
+Date field visible on daily to add tasks to a specific date.
+Priority radio buttons visible on work to add different levels of priority to tasks. 
+Add task button to create tasks.
+
+Daily Tasks
+List of tasks passed through javascript dictionary for each task with a date and description for fields
+Date field at the top to choose which days tasks to look at
+Pass through list and if the date matched the date field, show the task in the list
+
+Work Tasks
+Tabs at the top All, Low, Medium and High
+Show all tasks in all tab, then only the ones of a specific priority in the other tabs
+
+
+Daily and Work Task pages have checkboxes to cross out specific tasks
+
