@@ -4,3 +4,11 @@ body{
 .main-content{
     height: 80vh;
 }
+
+input, select{
+    margin: 20px;
+}
+
+.form-label{
+    font-weight: bold;
+}
