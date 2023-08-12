@@ -5,25 +5,28 @@
 <form action="/submit" method="POST">
     <label class="form-label">Task Type: </label>
     <select id="task-type" name="task-type">
-        <option value="daily">daily</option>
+        <option value="daily", selected="selected">daily</option>
         <option value="work">work</option>
     </select><br>
 
     <label class="form-label">Task Description: </label>
-    <input type="text" name="task-description"><br>
+    <input type="text" name="task-description" id="task-description"><br>
     
-    <label class="form-label">Priority: </label>
-    <input type="radio" id="high" name="task-priority"value="high">
-    <label>High</label>
-    <input type="radio" id="medium" name="task-priority" value="medium" checked="checked">
-    <label>Medium</label>
-    <input type="radio" id="low" name="task-priority" value="low">
-    <label>Low</label><br>
-    
-    <label class="form-label">Date: </label>
-    <input type="date" name="task-date"><br>
+    <div class = "priority invisible">
+        <label class="form-label">Priority: </label>
+        <input type="radio" id="high" name="task-priority" value="high">
+        <label>High</label>
+        <input type="radio" id="medium" name="task-priority" value="medium" checked="checked">
+        <label>Medium</label>
+        <input type="radio" id="low" name="task-priority" value="low">
+        <label>Low</label><br>
+    </div>
+
+    <div class="date">
+        <label class="form-label">Date: </label>
+        <input type="date" name="task-date"><br>
+    </div>
 
     <input type="submit" value="Create Task">
 </form>
-
 <%- include("partials/footer.ejs")%>

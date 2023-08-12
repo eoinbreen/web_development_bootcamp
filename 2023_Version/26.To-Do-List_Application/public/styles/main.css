@@ -12,3 +12,7 @@ input, select{
 .form-label{
     font-weight: bold;
 }
+
+.invisible{
+    visibility: hidden;
+}

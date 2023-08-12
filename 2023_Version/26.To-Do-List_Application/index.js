@@ -9,7 +9,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 //Add a Task Page
-
 var tasks = [];
 
 function createTask(req){
@@ -21,8 +20,14 @@ function createTask(req){
   var task = {
     type: task_type,
     description: task_description,
-    priority: task_priority,
-    date: task_date
+  }
+
+  if(task_type === "daily"){
+    task["date"] = task_date;
+  }
+
+  else if(task_type === "work"){
+    task["priority"] = task_priority;
   }
 
   tasks.push(task);
