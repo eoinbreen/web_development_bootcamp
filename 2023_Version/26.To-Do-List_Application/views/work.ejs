@@ -1,5 +1,8 @@
 <%- include("partials/header.ejs") %>
 
 <h1>Work Tasks</h1>
+<% tasks.forEach((task) => { %>
+    <p><%= task['description'] %></p>
+<% }); %>
 
 <%- include("partials/footer.ejs")%>

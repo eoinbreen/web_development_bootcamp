@@ -1,5 +1,7 @@
 <%- include("partials/header.ejs") %>
 
 <h1>Daily Tasks</h1>
-
+<% tasks.forEach((task) => { %>
+    <p><%= task['description'] %></p>
+<% }); %>
 <%- include("partials/footer.ejs")%>
