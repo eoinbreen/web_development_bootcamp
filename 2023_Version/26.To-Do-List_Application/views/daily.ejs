@@ -1,7 +1,14 @@
 <%- include("partials/header.ejs") %>
 
-<h1>Daily Tasks</h1>
+<h1>Todays Tasks</h1>
+
+<% var i = 0 %>
+
 <% tasks.forEach((task) => { %>
-    <p><%= task['description'] %></p>
+    <input type="checkbox" id="<%=i%>">
+    <p id="p<%=i%>"><%= task['description'] %></p><br>
+    <%i++%>
 <% }); %>
+
+
 <%- include("partials/footer.ejs")%>

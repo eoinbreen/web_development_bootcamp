@@ -13,3 +13,11 @@ task_type.on('change', () => {
     $(".date").addClass("invisible");
   }
 });
+
+
+$('input[type=checkbox]').change(
+  function(){
+      id = this.id;
+      $("#p"+id).toggleClass("completed")
+  });
+

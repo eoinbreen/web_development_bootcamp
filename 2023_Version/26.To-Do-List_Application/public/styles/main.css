@@ -9,10 +9,18 @@ input, select{
     margin: 20px;
 }
 
+p{
+    display: inline;
+}
+
 .form-label{
     font-weight: bold;
 }
 
 .invisible{
     visibility: hidden;
+}
+
+.completed{
+    text-decoration: line-through;
 }
