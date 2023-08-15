@@ -24,3 +24,13 @@ p{
 .completed{
     text-decoration: line-through;
 }
+
+.high{
+    color: red;
+}
+.medium{
+    color: green;
+}
+.low{
+    color: blue;
+}

@@ -1,6 +1,6 @@
 import express from "express";
 import bodyParser from "body-parser";
-import fs from "fs"
+import dayjs from 'dayjs'
 
 const app = express();
 const port = 3000;
@@ -8,6 +8,7 @@ const port = 3000;
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
+var today = dayjs().format('MM/DD/YYYY');
 
 
 function createTask(req){
@@ -23,13 +24,11 @@ function createTask(req){
   }
 
   if(task_type === "daily"){
-    console.log("Daily Tasks: " + daily_tasks);
     task["date"] = task_date;
     daily_tasks.push(task);
   }
 
   else if(task_type === "work"){
-    console.log("Work Tasks: " + work_tasks);
     task["priority"] = task_priority;
     work_tasks.push(task);
   }
@@ -48,6 +47,7 @@ app.post("/submit", (req, res) => {
 
 app.get("/daily", (req, res) => {
   res.render("daily.ejs", {
+    today: today,
     tasks: daily_tasks,
   });
 });
@@ -82,7 +82,7 @@ var daily_tasks = [
     type: "daily",
     description: "Hoover the Floors",
     completed: false,
-    date: "08/14/2023"
+    date: "08/15/2023"
     },
   { 
     type: "daily",
@@ -92,7 +92,6 @@ var daily_tasks = [
     },
   
 ];
-
 
 var work_tasks = [
   { 

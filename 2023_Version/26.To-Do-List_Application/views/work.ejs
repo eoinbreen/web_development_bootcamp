@@ -2,11 +2,18 @@
 
 <h1>Work Tasks</h1>
 
+
+<p class="high">High Priority &nbsp &nbsp </p>
+
+<p class="medium">&nbsp &nbsp Medium Priority &nbsp &nbsp</p>
+
+<p class="low">&nbsp &nbsp Low Priority</p><br>
+
 <% var i = 0 %>
 
 <% tasks.forEach((task) => { %>
     <input type="checkbox" id="<%=i%>">
-    <p id="p<%=i%>"><%= task['description'] %></p><br>
+    <p id="p<%=i%>" class="<%=task['priority']%>"><%= task['description'] %></p><br>
     <%i++%>
 <% }); %>
 
