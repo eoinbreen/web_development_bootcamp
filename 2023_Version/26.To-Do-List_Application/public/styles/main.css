@@ -1,5 +1,7 @@
 body{
     text-align: center;
+    background-color: #91ec76;
+    color: #525FE1;
 }
 .main-content{
     height: 80vh;
@@ -9,10 +11,18 @@ input, select{
     margin: 20px;
 }
 
+h1{
+    text-decoration: underline;
+}
+
+
 p{
     display: inline;
 }
-
+.nav-link{
+    
+    font-weight: bold;
+}
 .form-label{
     font-weight: bold;
 }

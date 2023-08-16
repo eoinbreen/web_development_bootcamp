@@ -8,7 +8,7 @@ const port = 3000;
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-var today = dayjs().format('MM/DD/YYYY');
+var today = dayjs().format('YYYY-MM-DD');
 
 
 function createTask(req){
@@ -32,6 +32,7 @@ function createTask(req){
     task["priority"] = task_priority;
     work_tasks.push(task);
   }
+  console.log(task);
 }
 
 
@@ -70,25 +71,25 @@ var daily_tasks = [
     type: "daily",
     description: "Mow the Lawn",
     completed: false,
-    date: "08/13/2023"
+    date: "2023-08-15"
     },
   { 
     type: "daily",
     description: "Do the Dishes",
     completed: false,
-    date: "08/13/2023"
+    date: "2023-08-15"
     },
   { 
     type: "daily",
     description: "Hoover the Floors",
     completed: false,
-    date: "08/15/2023"
+    date: "2023-08-15"
     },
   { 
     type: "daily",
     description: "Paint the House",
     completed: false,
-    date: "08/15/2023"
+    date: "2023-08-16"
     },
   
 ];

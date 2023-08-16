@@ -1,18 +1,18 @@
-Black / Green Color Scheme
+Blue / Green Color Scheme -- Done
 Partial files for header / footer  -- Done
-Three Pages – One to add tasks, one for the daily tasks and one for the work tasks
+Three Pages – One to add tasks, one for the daily tasks and one for the work tasks -- Done
 
 Add Tasks
-dropdown list with work and daily options. 
-Input field for both 
-Date field visible on daily to add tasks to a specific date.
-Priority radio buttons visible on work to add different levels of priority to tasks. 
-Add task button to create tasks.
+dropdown list with work and daily options.  -- Done
+Input field for both -- Done
+Date field visible on daily to add tasks to a specific date.-- Done
+Priority radio buttons visible on work to add different levels of priority to tasks. -- Done
+Add task button to create tasks.-- Done
 Load tasks from a text file when app is opened
 Save tasks to a text file when a task is created
 
 Daily Tasks
-List of tasks passed through javascript dictionary for each task with a date and description for fields
+List of tasks passed through javascript dictionary for each task with a date and description for fields-- Done
 Date field at the top to choose which days tasks to look at
 Pass through list and if the date matched the date field, show the task in the list
 
