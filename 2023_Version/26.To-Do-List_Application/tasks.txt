@@ -1,0 +1,9 @@
+daily,Mow the Lawn,2023-08-18
+daily,Do the Dishes,2023-08-18
+daily,Hoover the Floors,2023-08-15
+daily,Paint the House,2023-08-16
+daily,dfn,2023-08-18
+daily,dsafr,2023-08-18
+work,Work on Presentation,high
+work,Email customer re Application,medium
+work,Sort out Filing System,low
