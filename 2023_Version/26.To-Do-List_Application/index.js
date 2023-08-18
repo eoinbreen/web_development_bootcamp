@@ -34,6 +34,7 @@ function createTask(req){
     work_tasks.push(task);
   }
   console.log(task);
+  writeTasks();
 }
 
 
@@ -75,6 +76,21 @@ function start(){
   
 }
 
+function writeTasks(){
+    var task_string = "";
+    daily_tasks.forEach((task) =>{
+      task_string += task['type'] + ',' + task['description'] + ',' + task['date'] + "\n"; 
+    });
+    work_tasks.forEach((task) =>{
+      task_string += task['type'] + ',' + task['description'] + ',' + task['priority'] + "\n";  
+    });
+
+    fs.writeFile("tasks.txt", task_string, (err) => {
+      if(err) throw err;
+      console.log("The tasks have been saved!");
+  })
+
+}
 function readTasks(data){
   var task_array = data.split("\n");
   task_array.forEach((task) => {
