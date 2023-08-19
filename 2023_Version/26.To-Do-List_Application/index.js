@@ -40,7 +40,9 @@ function createTask(req){
 
 
 app.get("/", (req, res) => {
-  res.render("index.ejs");
+  res.render("index.ejs", {
+    today: today,
+  });
 });
 
 app.post("/submit", (req, res) => {

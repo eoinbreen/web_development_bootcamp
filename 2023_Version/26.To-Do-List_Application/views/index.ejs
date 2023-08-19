@@ -1,7 +1,7 @@
 <%- include("partials/header.ejs") %>
 
 <h1>Add a Task</h1>
-
+<div class="main-content">
 <form action="/submit" method="POST">
     <label class="form-label">Task Type: </label>
     <select id="task-type" name="task-type">
@@ -24,7 +24,7 @@
 
     <div class="date">
         <label class="form-label">Date: </label>
-        <input type="date" name="task-date"><br>
+        <input type="date" name="task-date" value=<%=today%>><br>
     </div>
 
     <input type="submit" value="Create Task">

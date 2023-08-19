@@ -4,7 +4,11 @@ body{
     color: #525FE1;
 }
 .main-content{
-    height: 80vh;
+    height: 70vh;
+    width: 50vw;
+    margin: auto;
+    border: 2px solid #525FE1;
+    overflow-y: auto;
 }
 
 input, select{
