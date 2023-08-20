@@ -1,0 +1,11 @@
+git init - initializes a github repository in the current folder
+git status - gives you the files that have been changed since last commit
+git add file.txt- adds a file to your staging area, ready to be committed
+git add . - adds everything in the current directory to the staging area
+git rm --cached -r . -- Removes all files from your staging area
+git commit -m"Commit Message" - commits files in commit to your repository
+git log - see a log of all commits in repository
+touch .gitignore -- creates a gitignore file
+
+git remote add origin https://github.com/eoinbreen/Story.git -- Links repository to an online repository on github
+git push -u origin master -- pushes the master branch of your local repository onto your linked online repository
