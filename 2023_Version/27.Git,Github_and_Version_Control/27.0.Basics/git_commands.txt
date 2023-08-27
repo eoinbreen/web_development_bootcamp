@@ -5,7 +5,10 @@ git add . - adds everything in the current directory to the staging area
 git rm --cached -r . -- Removes all files from your staging area
 git commit -m"Commit Message" - commits files in commit to your repository
 git log - see a log of all commits in repository
-touch .gitignore -- creates a gitignore file
+git branch new_branch -- creates a new branch in repository so you can try something new without breaking your previous project
+git branch -- shows all the available branches
+git checkout new_branch -- changes the current branch you are working on to new_branch
 
+touch .gitignore -- creates a gitignore file
 git remote add origin https://github.com/eoinbreen/Story.git -- Links repository to an online repository on github
 git push -u origin master -- pushes the master branch of your local repository onto your linked online repository
