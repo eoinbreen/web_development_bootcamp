@@ -52,16 +52,34 @@ app.post("/submit", (req, res) => {
 
 app.get("/daily", (req, res) => {
   res.render("daily.ejs", {
-    today: today,
+    date: today,
+    tasks: daily_tasks,
+  });
+});
+
+app.post("/change-date", (req, res) => {
+  var date = req.body.date
+  res.render("daily.ejs", {
+    date: date,
     tasks: daily_tasks,
   });
 });
 
 app.get("/work", (req, res) => {
   res.render("work.ejs", {
-    tasks: work_tasks
+    priority: "all",
+    tasks: work_tasks,
   });
 });
+
+app.post("/change-priority", (req, res) => {
+  var priority = req.body.priority
+  res.render("work.ejs", {
+    priority: priority,
+    tasks: work_tasks,
+  });
+});
+
 
 app.listen(port, ()=>{
     console.log(`Server running on port ${port}`)

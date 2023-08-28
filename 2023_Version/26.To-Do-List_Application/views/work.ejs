@@ -3,19 +3,30 @@
 <h1>Work Tasks</h1>
 
 
-<p class="high">High Priority &nbsp &nbsp </p>
-
-<p class="medium">&nbsp &nbsp Medium Priority &nbsp &nbsp</p>
-
-<p class="low">&nbsp &nbsp Low Priority</p><br>
 <div class="main-content">
+    <form action="/change-priority" method="POST">
+        <button type="submit" value="all" name="priority">All Tasks</button>
+        <button type="submit" class="high" value="high" name="priority">High Priority</button>
+        <button type="submit" class="medium" value="medium" name="priority">Medium Priority</button>
+        <button type="submit" class="low" value="low" name="priority">Low Priority</button>
+    </form>
 
-<% var i = 0 %>
+    <% var i = 0 %>
 
-<% tasks.forEach((task) => { %>
-    <input type="checkbox" id="<%=i%>">
-    <p id="p<%=i%>" class="<%=task['priority']%>"><%= task['description'] %></p><br>
-    <%i++%>
-<% }); %>
+    <% tasks.forEach((task) => { %>
+        <% if(priority === 'all'){%>
+            <input type="checkbox" id="<%=i%>">
+            <p id="p<%=i%>" class="<%=task['priority']%>"><%= task['description'] %></p><br>
+            <%i++%>
+        <% } else if(task.priority === priority){ %>
+            <input type="checkbox" id="<%=i%>">
+            <p id="p<%=i%>" class="<%=task['priority']%>"><%= task['description'] %></p><br>
+            <%i++%>
+        <%}%>
+    <% }); %>
 
-<%- include("partials/footer.ejs")%>
+    <% if(i===0){ %>
+        <strong>No Tasks to Display</strong>
+    <% } %>
+
+    <%- include("partials/footer.ejs")%>

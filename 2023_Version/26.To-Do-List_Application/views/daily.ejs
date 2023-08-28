@@ -1,18 +1,24 @@
 <%- include("partials/header.ejs") %>
 
-<h1>Todays Tasks</h1>
+<h1><%=date%> Tasks</h1>
 
 <div class="main-content">
-<% var i = 0 %>
+    <form action="/change-date" method="POST">
+        <label class="form-label">Date: </label>
+        <input type="date" name="date" value=<%=date%>>
+        <input type="submit" value="Change Date">
+    </form>
+    <% var i = 0 %>
 
-<% tasks.forEach((task) => { 
-    if (task['date'] === today) {%>
-        
-    
-    <input type="checkbox" id="<%=i%>">
-    <p id="p<%=i%>"><%= task['description'] %></p><br>
-    <%i++%>
-<% }}); %>
+    <% tasks.forEach((task) => { 
+        if (task['date'] === date) {%>
+        <input type="checkbox" id="<%=i%>">
+        <p id="p<%=i%>"><%= task['description'] %></p><br>
+        <%i++%>
+    <% }}); %>
+    <% if(i===0){ %>
+        <strong>No Tasks to Display</strong>
+    <% } %>
 
 
-<%- include("partials/footer.ejs")%>
+    <%- include("partials/footer.ejs")%>
