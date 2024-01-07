@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Pokedex</title>
+        <link rel="icon" href="images/favicon.ico">
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+    <body>
+        
+        <h1>P<img src="images/Poké_Ball.png">kédex</h1>
+        <div class="pokedex_shell">
+            <% if(!locals.number) {%>
+            <div class="power"></div>
+            <div class="led red"></div>
+            <div class="led yellow"></div>
+            <div class="led green"></div>
+            <% } else { %>
+                <div class="power" style="background-color: blue;"></div>
+                <div class="led red" style="background-color: maroon;"></div>
+                <div class="led yellow" style="background-color: yellow;"></div>
+                <div class="led green" style="background-color: green;"></div>
+                <% } %>
+                
+            <% if(!locals.number) {%>
+                <div class="screen" style="background-color: Black;"></div>
+            <%} else { %>
+                <div class="screen" style="background-color: rgb(110, 167, 24);">
+                <img src=<%= sprite%>>
+                <p><%= number %>: <%= name %></p>
+                <p><%= game %> : <%= dex_entry %></p>
+                </div>
+            <% } %> 
+            
+            <form action="/pokedex" method="POST">
+                <input type="number" name="dex_num" min="1" max="1010" value="1">
+                <button type="submit" value="check-dex" name="choice">Check Dex</button><br>
+                <button type="submit" value="random" name="choice">Random Mon</button>
+            </form>
+        </div>
+    </body>
+</html>
