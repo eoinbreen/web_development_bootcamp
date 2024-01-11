@@ -31,10 +31,40 @@ app.get("/filter/", async(req, res) => {
 
 //4. POST a new joke
 
+app.post("/jokes/", async(req, res) => {
+
+  var newJoke = {
+    id: jokes.length + 1,
+    jokeText: req.body.text,
+    jokeType: req.body.type,
+  };
+  jokes.push(newJoke);
+  res.json(newJoke);
+
+});
+
 //5. PUT a joke
 
-//6. PATCH a joke
+app.put("/jokes/:id", async(req, res) => {
+  var id = parseInt(req.params.id);
+  var replacementJoke = {
+    id: id,
+    jokeText: req.body.text,
+    jokeType: req.body.type,
+  }
+  var searchIndex = jokes.findIndex((joke) => joke.id === id)
+  jokes[searchIndex] = replacementJoke;
+  
+  res.json(jokes[searchIndex]);
 
+});
+
+//6. PATCH a joke
+/*
+var changedJoke = jokes[id - 1];
+changedJoke.jokeText = req.body.text;
+changedJoke.jokeType = req.body.type;
+*/
 //7. DELETE Specific joke
 
 //8. DELETE All jokes
