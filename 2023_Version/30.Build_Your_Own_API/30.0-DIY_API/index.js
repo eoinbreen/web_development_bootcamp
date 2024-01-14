@@ -60,15 +60,50 @@ app.put("/jokes/:id", async(req, res) => {
 });
 
 //6. PATCH a joke
-/*
-var changedJoke = jokes[id - 1];
-changedJoke.jokeText = req.body.text;
-changedJoke.jokeType = req.body.type;
-*/
+app.patch("/jokes/:id", async(req, res) => {
+  var id = parseInt(req.params.id);
+  var selectedJoke = jokes.find((joke) => joke.id === id)
+  if(req.body.text) {selectedJoke.jokeText = req.body.text;} //Change it if variable exists
+  if(req.body.type) {selectedJoke.jokeType = req.body.type;}
+
+  /* From solution.js
+  const replacementJoke = {
+      id: id,
+      jokeText: req.body.text || existingJoke.jokeText,
+      jokeType: req.body.type || existingJoke.jokeType,
+    };
+  */
+  
+  res.json(selectedJoke);
+
+});
+
 //7. DELETE Specific joke
+app.delete("/jokes/:id", async(req, res) => {
+  var id = parseInt(req.params.id);
+  var searchIndex = jokes.findIndex((joke) => joke.id === id)
+  if (searchIndex > -1) {
+    jokes.splice(searchIndex, 1);
+    res.sendStatus(200);
+  } else {
+    res
+      .status(404)
+      .json({ error: `Joke with id: ${id} not found. No jokes were deleted.` });
+  }
+
+});
 
 //8. DELETE All jokes
-
+app.delete("/all", async(req, res) => {
+  if(req.query.key === masterKey){
+    jokes = [];
+    res.json("Deleted all jokes");
+  }
+  else{
+    res.json("User not authorised to delete, please provide correct API Key");
+  }
+ 
+});
 
 app.listen(port, () => {
   console.log(`Successfully started server on port ${port}.`);
