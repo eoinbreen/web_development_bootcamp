@@ -68,10 +68,12 @@ app.patch("/jokes/:id", async(req, res) => {
 
   /* From solution.js
   const replacementJoke = {
-      id: id,
-      jokeText: req.body.text || existingJoke.jokeText,
-      jokeType: req.body.type || existingJoke.jokeType,
-    };
+    id: id,
+    jokeText: req.body.text || existingJoke.jokeText,
+    jokeType: req.body.type || existingJoke.jokeType,
+  };
+  const searchIndex = jokes.findIndex((joke) => joke.id === id);
+  jokes[searchIndex] = replacementJoke;
   */
   
   res.json(selectedJoke);

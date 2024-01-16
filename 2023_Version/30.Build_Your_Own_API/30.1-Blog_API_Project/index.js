@@ -1,5 +1,6 @@
 import express from "express";
 import bodyParser from "body-parser";
+import dayjs from 'dayjs';
 
 const app = express();
 const port = 4000;
@@ -37,6 +38,7 @@ let lastId = 3;
 // Middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+var now = dayjs();
 
 //Write your code here//
 
@@ -47,12 +49,60 @@ app.get("/posts", async(req,res) => {
 });
 
 //CHALLENGE 2: GET a specific post by id
+app.get("/posts/:id", async(req,res) => {
+  var id = parseInt(req.params.id);
+  var foundPost = posts.find((post) => post.id === id);
+  res.json(foundPost);
+  console.log(foundPost);
+});
 
 //CHALLENGE 3: POST a new post
+app.post("/posts/", async(req,res) => {
+  var newPost = {
+    id: posts.length + 1,
+    title: req.body.title,
+    content: req.body.content,
+    author: req.body.author,
+    date: now,
+  };
+
+  posts.push(newPost);
+  res.json(posts);
+  console.log(posts);
+
+});
 
 //CHALLENGE 4: PATCH a post when you just want to update one parameter
+app.patch("/posts/:id", async(req,res) => {
+  var id = parseInt(req.params.id);
+  var selectedPost = posts.find((post) => post.id === id);
+  var replacementPost = {
+    id: id,
+    title: req.body.title || selectedPost.title,
+    content: req.body.content || selectedPost.content,
+    author: req.body.author || selectedPost.author,
+    date: now,
+  };
+  var searchIndex = posts.findIndex((post) => post.id === id);
+  posts[searchIndex] = replacementPost;
+  res.json(posts);
+  console.log(posts);
+
+});
 
 //CHALLENGE 5: DELETE a specific post by providing the post id.
+app.delete("/posts/:id", async(req,res) =>{
+  var id = parseInt(req.params.id);
+  var searchIndex = posts.findIndex((post) => post.id === id);
+  if (searchIndex > -1) {
+    posts.splice(searchIndex, 1);
+    res.sendStatus(200);
+  } else {
+    res
+      .status(404)
+      .json({ error: `Post with id: ${id} not found. No posts were deleted.` });
+  }
+});
 
 app.listen(port, () => {
   console.log(`API is running at http://localhost:${port}`);
